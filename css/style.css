@@ -1,0 +1,109 @@
+body {
+    overflow: hidden; /* Hide scrollbars */
+  }
+
+.background {
+  position: relative;
+}
+.dino {
+  position: absolute;
+  width: 88px;
+  height: 94px;
+  background-image: url(../img/dino_run_1.jpg);
+  background-repeat: no-repeat;
+  /* transition: all 2s linear ; */
+  animation: dino_run linear 0.2s infinite;
+  top: 430px;
+  left: 350px;
+  transition: all 0.3s ease-out;
+}
+
+.ground {
+  position: absolute;
+  background-image: url(../img/ground.png);
+  top: 500px;
+  width: 2042px;
+  height: 27px;
+}
+.g1 {
+  animation: ground_move_g1 linear 3s infinite;
+}
+.g2 {
+  left: 2042px;
+  animation: ground_move_g2 linear 3s infinite;
+}
+
+.cactus {
+  position: absolute;
+  animation: cacutus_move linear 3s infinite;
+}
+
+.c1 {
+  animation: cacutus_move linear 3s infinite;
+  background-image: url(../img/cactus_1.jpg);
+
+  width: 46px;
+  height: 97px;
+  top: 430px;
+  left: 1940px;
+}
+.c2 {
+  animation: cacutus_move linear 3s infinite 2s;
+  background-image: url(../img/cactus_2.jpg);
+  width: 98px;
+  height: 100px;
+  top: 430px;
+  left: 1940px;
+}
+
+.c3 {
+  animation: cacutus_move linear 3s infinite 1s;
+  background-image: url(../img/cactus_3.jpg);
+  width: 102px;
+  height: 100px;
+  top: 430px;
+  left: 1940px;
+}
+
+.dino:active {
+  top: 300px;
+  background-image: url(../img/dino_run_1.jpg);
+}
+
+@keyframes cacutus_move {
+  100% {
+    left: -102px;
+  }
+}
+
+@keyframes ground_move_g1 {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -2042px;
+  }
+}
+@keyframes ground_move_g2 {
+  0% {
+    left: 2042px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+/* 
+    dino-size-H 94
+    dino-size-W 88
+*/
+@keyframes dino_run {
+  0% {
+    background-image: url(../img/dino_run_1.jpg);
+  }
+  50% {
+    background-image: url(../img/dino_run_2.jpg);
+  }
+  100% {
+    background-image: url(../img/dino_run_3.jpg);
+  }
+}
